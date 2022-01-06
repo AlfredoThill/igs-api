@@ -5,6 +5,7 @@ const igPass = process.env.IG_PASS;
 
 async function startBrowser(){
     let browser;
+    let cookies = [];
     try {
         console.log("Opening the browser......");
         browser = await puppeteer.launch({
@@ -21,12 +22,13 @@ async function startBrowser(){
         await page.type('input[name="password"]', igPass);
         await page.click('button[type="submit"]');
         await page.waitForSelector('svg[aria-label="Home"][role="img"]');
+        cookies = await page.cookies();
         await page.goto('about:blank');
         await page.close();
     } catch (err) {
         console.log("Could not create a browser instance => : ", err);
     }
-    return browser;
+    return { browser, cookies };
 }
 
 module.exports = {

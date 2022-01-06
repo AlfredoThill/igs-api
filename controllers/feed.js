@@ -1,9 +1,5 @@
 
-const browserInstance = require('../browser/index');
-const axios = require('axios');
-const cheerio = require('cheerio');
-const Insta = require('scraper-instagram');
-const InstaClient = new Insta();
+const { browserInstance, InstaClient } = require('../browser/index');
 
 exports.getProfile = (req, res, next) => {
   const username = req.query.name;
