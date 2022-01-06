@@ -1,7 +1,7 @@
 ### Instragram Scrapper API ###
 
 Service Alts:
-	-scrapper pkg => PRO: nice, canned solution CON: rate limit sucks (pkg: instagram-scraping)
+	-scrapper pkg => PRO: nice, canned solution CON: rate limit sucks (pkg: instagram-scraping) ====> check out limits with cookie auth! beware that the login service has a low rate limit itself
 	-META auth API => PRO: pending set up CON: rate limit, by docs (url: https://developers.facebook.com/docs/instagram-basic-display-api/getting-started)
  	-browserScrapping => PRO: no rate limit so far, easy auth CON: performance, requires scrap dev (with puppeteer)
 	-paid API => PRO: goes around rate limit by changing proxies CON: PAID external service (url: https://rapidapi.com/premium-apis-premium-apis-default/api/instagram85/)
